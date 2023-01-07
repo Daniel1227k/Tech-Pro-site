@@ -1,0 +1,433 @@
+:root {
+  --fuentePrincipal: 'Roboto', sans-serif;
+  --fuenteSecundaria: 'Lato', sans-serif;
+
+  --primario: #1073ba;
+  --secundario: #00da55;
+  --gris: #3b3b3b;
+  --blanco: #fff;
+  --negro: #1f1e1e;
+  --grisClaro: #e1e1e1;
+
+  --separacion: 3.125rem;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+img {
+  height: auto;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+p a {
+  display: inline;
+}
+li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--fuentePrincipal);
+  line-height: 1.5;
+}
+/* ======================GLOBALES================ */
+.contenedor {
+  max-width: 75rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.deg-verde {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--primario) 0%,
+    var(--secundario) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  font-family: var(--fuenteSecundaria);
+  margin: calc(var(--separacion) / 2) 0;
+}
+h1 {
+  font-size: 2.75em;
+}
+h2 {
+  font-size: 2.25em;
+}
+h3 {
+  font-size: 1.75em;
+}
+/* ===============UTILIDADES============= */
+.text-center {
+  text-align: center;
+}
+/* =================HEADER================ */
+.header {
+  background-color: var(--negro);
+  padding: calc(var(--separacion) * 3) 0;
+  color: var(--blanco);
+}
+.header__texto {
+  text-align: center;
+  padding-top: var(--separacion);
+}
+.header__producto {
+  font-size: 1.875em;
+  font-weight: 900;
+}
+.header__h1 {
+  font-size: 3.75em;
+  margin: 0;
+}
+.header__precio-sapn {
+  font-size: 3.75em;
+  font-weight: 900;
+}
+/* ====================ICONOS============== */
+.iconos {
+  padding: var(--separacion) 0;
+}
+.icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: calc(var(--separacion) / 2);
+}
+.icono:last-of-type {
+  margin: 0;
+}
+.icono__img {
+  width: 50px;
+}
+.icono__h3 {
+  color: var(--primario);
+  text-transform: uppercase;
+  margin-top: calc(var(--separacion) / 2);
+}
+/* ===============SOBRE-TECH================ */
+.tech {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--primario) 0%
+    ),
+    url(../img/imagen-mujer.jpg);
+  background-position: right;
+  background-repeat: repeat, no-repeat;
+  background-size: 100%, 68.75rem;
+}
+.tech__grid {
+  display: grid;
+  grid-template-rows: repeat(2, 25rem);
+  row-gap: var(--separacion);
+}
+.tech__texto {
+  grid-row: 2 / 3;
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: var(--separacion);
+}
+.tech__h2 {
+  font-size: 2.5em;
+}
+.tech__p {
+  font-size: 1.25em;
+  line-height: 2;
+}
+/* ====================MODELOS==================== */
+.modelos {
+  padding: var(--separacion) 0;
+}
+.modelos__h2 {
+  font-size: 3.75em;
+}
+.modelos__lista {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: calc(var(--separacion) / 2);
+}
+.modelo {
+  background-color: var(--grisClaro);
+  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  color: var(--primario);
+  border-radius: 1.25rem;
+  min-height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-size: 9.375rem;
+  transition: transform 0.3s, background-size 0.3s;
+}
+.modelo:hover {
+  transform: scale(1.1);
+  background-size: 17.5rem;
+}
+.modelo:first-of-type {
+  margin-bottom: 0;
+}
+.modelo-x {
+  background-image: url(../img/modelo-x.svg);
+}
+.modelo-y {
+  background-image: url(../img/modelo-y.svg);
+}
+.modelo-z {
+  background-image: url(../img/modelo-z.svg);
+  background-color: var(--primario);
+  color: var(--blanco);
+}
+.modelo-z .modelo__precio {
+  font-size: 3.75em;
+}
+.modelo__h3 {
+  font-size: 1.5em;
+}
+.modelo__precio {
+  font-size: 2.5em;
+  font-weight: 900;
+}
+/* ===============NEWSLETTER============== */
+.newsletter {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--blanco) 0%
+    ),
+    url(../img/newsletter.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%, 43.75rem;
+}
+.newsletter__contenido {
+  display: grid;
+  grid-template-rows: repeat(2, 18.75rem);
+  gap: var(--separacion);
+}
+.newsletter__texto {
+  grid-row: 2 / 3;
+}
+
+.newsletter__formulario input[type='text'] {
+  width: 100%;
+  padding: 0.625rem;
+  margin-top: 1.25rem;
+}
+.newsletter__formulario input[type='submit'] {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: var(--primario);
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: 900;
+}
+.footer {
+  margin-top: calc(var(--separacion) / 2);
+  padding: var(--separacion);
+}
+.footer__p {
+  text-align: center;
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.25em;
+  text-transform: uppercase;
+  color: var(--primario);
+}
+@media screen and (max-width: 464px) {
+  .header {
+    padding: calc(var(--separacion) * 1.5) 0;
+  }
+  .modelo {
+    background-size: 6.875rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header__texto {
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header__h1 {
+    font-size: 6.25em;
+    line-height: 1;
+  }
+  .iconos {
+    display: flex;
+    gap: 1.25rem;
+  }
+  .icono {
+    margin: 0;
+  }
+  .tech {
+    background-image: linear-gradient(
+        to left,
+        transparent 50%,
+        var(--primario) 0%
+      ),
+      url(../img/imagen-mujer.jpg);
+    background-position: right;
+    background-repeat: repeat, no-repeat;
+    background-size: 100%, 68.75rem;
+  }
+  .tech__grid {
+    grid-template-rows: unset;
+    row-gap: unset;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem;
+    padding: calc(var(--separacion) * 2) 0;
+  }
+  .tech__texto {
+    padding-bottom: 0;
+  }
+  .newsletter {
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        var(--blanco) 0%
+      ),
+      url(../img/newsletter.jpg);
+    background-position: center, 0rem 0rem;
+    background-size: 100%, 62.5rem;
+    padding: 6.25rem 0;
+  }
+  .newsletter__contenido {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .newsletter__texto {
+    grid-row: unset;
+    grid-column: 2 / 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .modelos__lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 12.5rem);
+    gap: 2.5rem;
+  }
+  .modelo__h3 {
+    font-size: 1.75em;
+  }
+  .modelo-z {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background-size: 14.0625em;
+    margin-bottom: 2.4rem;
+  }
+  .modelo-z .modelo__h3 {
+    font-size: 1.875em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .modelo-z .modelo__h3 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .tech {
+    background-size: 100%, 131.25rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .newsletter {
+    background-size: 100%, 125rem;
+    background-position: center, 0% -30rem;
+  }
+}
